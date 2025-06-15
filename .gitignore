@@ -1,0 +1,5 @@
+*exercism
+*.exercism
+exercism*
+__pycache__*
+.exercism
