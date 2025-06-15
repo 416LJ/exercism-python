@@ -3,3 +3,5 @@
 exercism*
 __pycache__*
 .exercism
+*.pytest_cache
+.pytest_cache*
