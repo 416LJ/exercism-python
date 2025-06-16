@@ -7,3 +7,4 @@ def is_pangram(sentence):
     return all(item in sentence for item in alphabets)
 
 print(is_pangram("hello world"))
+
