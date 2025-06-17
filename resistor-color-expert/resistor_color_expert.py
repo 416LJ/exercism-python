@@ -11,11 +11,10 @@ def resistor_label(colors):
         color_2 = colors[1]
         color_3 = colors[2]
         color_4 = colors[3]
-        
+
         zeros = chart[color_3]
         tols_num = tols_list[color_4]
-        tolerance = tols_num/100
-
+    
         ohms = int(str(chart[color_1])+str(chart[color_2]))*((1*(10**zeros)))
         
         if ohms == 0:
@@ -54,7 +53,6 @@ def resistor_label(colors):
         
         zeros = chart[color_4]
         tols_num = tols_list[color_5]
-        tolerance = tols_list[color_5]/100
 
         ohms = int(str(chart[color_1])+str(chart[color_2])+str(chart[color_3]))*((1*(10**zeros)))
         
