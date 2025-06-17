@@ -7,7 +7,7 @@ def label(colors):
     color_2 = colors[1]
     color_3 = colors[2]
     zeros = chart[color_3]
-
+    print(color_1,color_2,color_3)
     ohms = int(str(chart[color_1])+str(chart[color_2]))*((1*(10**zeros)))
 
     if ohms == 0:
@@ -41,3 +41,4 @@ def colors_list():
             "white",
         ]
     return expected
+print(label(["red", "green", "yellow", "yellow", "brown"]))
