@@ -1,10 +1,12 @@
+"""Functions for creating, transforming, and adding prefixes to strings."""
 import itertools
+
 def round_scores(student_scores):
     """Round all provided student scores.
     :param student_scores: list - float or int of student exam scores.
     :return: list - student scores *rounded* to nearest integer value.
     """ 
-    return [round(x,0) for x in student_scores]
+    return [round(score,0) for score in student_scores]
 
 def count_failed_students(student_scores):
     """Count the number of failing students out of the group provided.
@@ -12,8 +14,8 @@ def count_failed_students(student_scores):
     :return: int - count of student scores at or below 40.
     """
     count = 0
-    for x in student_scores:
-        if x <= 40:
+    for score in student_scores:
+        if score <= 40:
             count += 1
     return count
 
@@ -26,10 +28,10 @@ def above_threshold(student_scores, threshold):
     best_scores = []
     best = threshold
     
-    for x in student_scores:
-        if x >= best:
-            best_scores.append(x)
-    return(best_scores)
+    for score in student_scores:
+        if score >= best:
+            best_scores.append(score)
+    return best_scores
 
 def letter_grades(highest):
     """Create a list of grade thresholds based on the provided highest grade.
@@ -53,19 +55,19 @@ def student_ranking(student_scores, student_names):
     :return: list - of strings in format ["<rank>. <student name>: <score>"].
     """
     the_list = []
-    for i, (name,score) in enumerate(zip(student_names,student_scores),start = 1):
-        the_list.append(f"{i}. {name}: {score}")
+    for index, (name,score) in enumerate(zip(student_names,student_scores),start = 1):
+        the_list.append(f"{index}. {name}: {score}")
     return the_list
 
 def perfect_score(student_info):
     the_record = []
     found_student = False
     
-    for list in student_info:
-        if list[1] == 100:
-            while found_student == False:
-                the_record.append(list[0])
-                the_record.append(list[1])
+    for record in student_info:
+        if record[1] == 100:
+            while found_student is False:
+                the_record.append(record[0])
+                the_record.append(record[1])
                 found_student = True
         else:
             continue
