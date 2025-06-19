@@ -1,3 +1,10 @@
+"""
+Set a number and try it out
+
+"""
+
+number = 999*999
+
 def square_root(number):
     if number == 1:
         return 1
@@ -19,9 +26,6 @@ def square_root(number):
 
         else:
             right = mid - 1
-        
-number = 999*999
-square_root(number)
 
 def square_root2(number):
     iterations = 0
@@ -29,5 +33,7 @@ def square_root2(number):
             iterations += 1
             if i*i == number:
                 return f"found sq rt of {number} : {i} in {iterations} attempts"
+            
 
+square_root(number)
 print(square_root2(number))
