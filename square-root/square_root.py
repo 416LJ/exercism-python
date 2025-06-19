@@ -1,9 +1,9 @@
 """
+
 Set a number and try it out
 
 """
-
-number = 999*999
+number = 9999*9999
 
 def square_root(number):
     if number == 1:
